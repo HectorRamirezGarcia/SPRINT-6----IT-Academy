@@ -1,3 +1,14 @@
-<div *ngFor="let element of frases">
-    <p>{{element}}</p>
+<div ngClass="row">
+    <button (click)="prev()">ANTERIOR</button>
+    <button (click)="next()">SIGUIENTE</button>
+</div>
+
+<div *ngFor="let element of frases; first as isFirst">
+    <p id="{{frases.indexOf(element)}}" ngClass="frase_activa" *ngIf="isFirst; else noFirst">
+        {{element}}
+    </p>
+    <ng-template #noFirst>
+        <p id="{{frases.indexOf(element)}}" ngClass="">{{element}}</p>
+    </ng-template>
+    
 </div>

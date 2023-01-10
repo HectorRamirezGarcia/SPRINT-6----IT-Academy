@@ -3,9 +3,33 @@ div {
     text-align: center;
 }
 
+button {
+    margin: 1.5rem;
+    padding: 1.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 40px;
+    transition: 0.5s;
+    border: 1px solid black;
+}
+
+button:hover {
+    background-color: black;
+    color: white;
+}
+
+button:active {
+    background-color: rgb(243, 4, 116);
+    border-color:rgb(123, 62, 90);
+}
+
 p {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding: 2rem;
     border: solid 1px black;
     border-radius: 40px;
+}
+
+.frase_activa {
+    background-color: rgb(243, 4, 116);
+    color: white;
 }
