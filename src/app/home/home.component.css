@@ -1,0 +1,32 @@
+/* Nav styles */
+nav {
+  font-family: "Rowdies", cursive;
+}
+
+form > h2 {
+  color: rgb(243, 4, 116);
+}
+
+button {
+  background-color: rgb(243, 4, 116);
+  border: solid 2px rgb(123, 62, 90);
+  color: white;
+  border-radius: 40px;
+  transition: 0.5s;
+}
+
+button:hover {
+  background-color: rgb(241, 114, 174);
+  border-color: rgb(158, 117, 136);
+  color: white;
+}
+
+/* Main content styles */
+.main-content > .card {
+  font-family: "Rowdies", cursive;
+  border: none;
+}
+
+.card-body > p {
+  font-family: "Courier New", Courier, monospace !important;
+}/*# sourceMappingURL=home.component.css.map */

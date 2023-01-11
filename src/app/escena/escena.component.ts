@@ -18,7 +18,7 @@ export class EscenaComponent {
     const child_frase_activa = class_frase_activa[0];
     let id_frase_activa = child_frase_activa.id;
     document.getElementById(id_frase_activa+"")!.removeAttribute("class");
-    if(id_frase_activa == "3"){id_frase_activa = "-1";}
+    if(id_frase_activa == (""+(this.frases.length-1))){id_frase_activa = "-1";}
     const next_frase = document.getElementById(""+(parseInt(id_frase_activa)+1));
     next_frase?.setAttribute('class', 'frase_activa');
   }
@@ -28,7 +28,7 @@ export class EscenaComponent {
     const child_frase_activa = class_frase_activa[0];
     let id_frase_activa = child_frase_activa.id;
     document.getElementById(id_frase_activa+"")!.removeAttribute("class");
-    if(id_frase_activa == "0"){id_frase_activa = "4";}
+    if(id_frase_activa == "0"){id_frase_activa = String(this.frases.length)}
     const next_frase = document.getElementById(""+(parseInt(id_frase_activa)-1));
     next_frase?.setAttribute('class', 'frase_activa');
   }
