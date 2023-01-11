@@ -1,4 +1,4 @@
-<div class="container-fluid p-4">
+<div id="body-escena" class="container-fluid p-4" [ngStyle]="{'background-image': 'url(../../assets/img/1.jpg)', 'background-repeat': 'no-repeat', 'background-size': 'cover'}" >
     <div ngClass="row-fluid">
         <button (click)="prev()">ANTERIOR</button>
         <button (click)="next()">SIGUIENTE</button>
@@ -6,11 +6,12 @@
     
     <div *ngFor="let element of frases; first as isFirst">
         <p id="{{frases.indexOf(element)}}" ngClass="frase_activa" *ngIf="isFirst; else noFirst">
-            {{element}}
+            {{element.frase}}
         </p>
         <ng-template #noFirst>
-            <p id="{{frases.indexOf(element)}}" ngClass="">{{element}}</p>
+            <p id="{{frases.indexOf(element)}}" ngClass="">{{element.frase}}</p>
         </ng-template>
         
     </div>
 </div>
+
