@@ -4,12 +4,12 @@
         <button (click)="next()">SIGUIENTE</button>
     </div>
     
-    <div *ngFor="let element of frases; first as isFirst">
-        <p id="{{frases.indexOf(element)}}" ngClass="frase_activa" *ngIf="isFirst; else noFirst">
+    <div *ngFor="let element of frases; first as isActive; let i=index">
+        <p id="{{i}}" [ngClass]="{ 'active' : isActive }" *ngIf="isActive; else noFirst">
             {{element.frase}}
         </p>
         <ng-template #noFirst>
-            <p id="{{frases.indexOf(element)}}" ngClass="">{{element.frase}}</p>
+            <p id="{{i}}" ngClass="">{{element.frase}}</p>
         </ng-template>
         
     </div>

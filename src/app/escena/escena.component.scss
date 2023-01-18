@@ -19,9 +19,10 @@ button:hover {
     color: white;
 }
 
-button:active {
+p.active {
     background-color: rgb(243, 4, 116);
     border-color:rgb(123, 62, 90);
+    color: white;
 }
 
 p {
@@ -30,9 +31,4 @@ p {
     border: solid 1px black;
     border-radius: 40px;
     background-color: rgba(243, 239, 241, 0.642);
-}
-
-.frase_activa {
-    background-color: rgb(243, 4, 116);
-    color: white;
 }
