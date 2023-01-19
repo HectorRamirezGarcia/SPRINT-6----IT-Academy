@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { EscenaComponent } from './../escena/escena.component';
+import { Component, ElementRef, Input } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -13,4 +14,6 @@ export class HomeComponent {
     { frase: "L'heroi va decidir travessar la porta que el portava a casa", img: "../../assets/img/3.jpg" },
     { frase: "Mentrestant, altres heroes no van tenir tanta sort en la seva elecció ...", img: "../../assets/img/4.jpg" },
   ];
+  
+
 }
