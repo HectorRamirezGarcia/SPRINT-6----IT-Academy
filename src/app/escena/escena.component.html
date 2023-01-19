@@ -1,17 +1,20 @@
-<div ngClass="body-escena container-fluid p-4" [ngStyle]="{'background-image': bg_img}">
+<div ngClass="body-escena container-fluid p-4" [ngStyle]="{'background-image': bg_img }">
     <div ngClass="row-fluid">
         <button (click)="prev()">ANTERIOR</button>
         <button (click)="next()">SIGUIENTE</button>
-    </div>
-    
-    <div *ngFor="let element of frases; first as isActive; let i=index">
-        <p id="{{i}}" [ngClass]="{ 'active' : isActive }" *ngIf="isActive; else noFirst">
-            {{element.frase}}
-        </p>
-        <ng-template #noFirst>
-            <p id="{{i}}" ngClass="">{{element.frase}}</p>
-        </ng-template>
         
     </div>
+    
+    <div *ngFor="let element of frases; let i=index;">
+        <div *ngIf="this.contador == i;">
+            <p id="{{i}}" [ngClass]="{'active':'active'}">
+                {{element.frase}}
+            </p>
+        </div>
+        <div *ngIf="this.contador != i;">
+            <p id="{{i}}" ngClass="">{{element.frase}}</p>
+        </div>
+        
+    </div>
+    
 </div>
-
